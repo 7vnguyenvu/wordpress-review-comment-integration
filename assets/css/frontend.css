@@ -1,0 +1,202 @@
+div.rating-container {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+div.rating-container * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.rating-container div,
+div.rating-container span,
+div.rating-container applet,
+div.rating-container object,
+div.rating-container iframe,
+div.rating-container h1,
+div.rating-container h2,
+div.rating-container h3,
+div.rating-container h4,
+div.rating-container h5,
+div.rating-container h6,
+div.rating-container p,
+div.rating-container blockquote,
+div.rating-container pre,
+div.rating-container a,
+div.rating-container abbr,
+div.rating-container acronym,
+div.rating-container address,
+div.rating-container big,
+div.rating-container cite,
+div.rating-container code,
+div.rating-container del,
+div.rating-container dfn,
+div.rating-container em,
+div.rating-container font,
+div.rating-container img,
+div.rating-container ins,
+div.rating-container kbd,
+div.rating-container q,
+div.rating-container s,
+div.rating-container samp,
+div.rating-container small,
+div.rating-container strike,
+div.rating-container strong,
+div.rating-container tt,
+div.rating-container var,
+div.rating-container b,
+div.rating-container u,
+div.rating-container i,
+div.rating-container center,
+div.rating-container dl,
+div.rating-container dt,
+div.rating-container dd,
+div.rating-container ol,
+div.rating-container ul,
+div.rating-container li,
+div.rating-container fieldset,
+div.rating-container form,
+div.rating-container label,
+div.rating-container legend,
+div.rating-container table,
+div.rating-container caption,
+div.rating-container tbody,
+div.rating-container tfoot,
+div.rating-container thead,
+div.rating-container tr,
+div.rating-container th,
+div.rating-container td {
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+div.rating-container ol,
+div.rating-container ul {
+    list-style: none;
+}
+div.rating-container span {
+    display: inline-block;
+    line-height: 1;
+}
+div.rating-container .crfp-bar {
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+div.rating-container .crfp-bar.rating-always-on .bar {
+    background: #ccc;
+}
+div.rating-container .crfp-bar .label {
+    width: 15%;
+}
+div.rating-container .crfp-bar .bar {
+    width: 65%;
+    display: inline-block;
+}
+div.rating-container .crfp-bar .bar .fill {
+    background: #f5c710;
+}
+div.rating-container .crfp-bar .count {
+    width: 10%;
+    margin: 0 0 0 5px;
+}
+div.rating-container span.rating-always-on {
+    width: 80px;
+    height: 16px;
+    margin-right: 5px !important;
+    background: url(../../views/global/svg.php?svg=star&color=cccccc) 0 0 repeat-x;
+}
+div.rating-container span.rating-filled-only {
+    margin-right: 5px !important;
+}
+div.rating-container span.crfp-rating {
+    display: block !important;
+    height: 16px;
+    text-indent: -9999em;
+    background: url(../../views/global/svg.php?svg=star&color=f5c710) 0 0 repeat-x;
+}
+.crfp-field {
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.crfp-field * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.crfp-field label,
+.crfp-field span,
+.crfp-field div,
+.crfp-field a {
+    width: none;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+.crfp-field div.star-rating {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-indent: -999em;
+    cursor: pointer;
+    background: transparent;
+    overflow: hidden;
+}
+.crfp-field div.star-rating a {
+    display: block;
+    width: 16px;
+    max-width: 16px;
+    height: 16px;
+    background: url(../../views/global/svg.php?svg=star&color=cccccc) no-repeat 0 0;
+    border: 0;
+}
+.crfp-field div.star-rating-hover a {
+    background: url(../../views/global/svg.php?svg=star&color=b43600) no-repeat 0 0;
+}
+.crfp-field div.star-rating-on a {
+    background: url(../../views/global/svg.php?svg=star&color=f5c710) no-repeat 0 0;
+}
+.crfp-field div.rating-cancel {
+    display: inline-block;
+    width: 17px;
+    height: 15px;
+    text-indent: -999em;
+    cursor: pointer;
+    background: transparent;
+    overflow: hidden;
+}
+.crfp-field div.rating-cancel a {
+    display: block;
+    width: 16px;
+    height: 100%;
+    background: url(../../views/global/svg.php?svg=delete&color=red) no-repeat 0 0;
+    border: 0;
+}
+.crfp-field div.rating-cancel a:hover {
+    background: url(../../views/global/svg.php?svg=delete&color=red) no-repeat 0 0;
+}
+.crfp-comment-list-sorting {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.crfp-comment-list-sorting form {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.crfp-comment-list-sorting form div {
+    text-align: right;
+}
+.crfp-comment-list-sorting form div label {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}

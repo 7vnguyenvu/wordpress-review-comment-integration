@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var n=function(){$("select.wpzinc-tags").each(function(){$(this).unbind("change.wpzinc-tags").on("change.wpzinc-tags",function(n){var t=$(this).val(),a=$(this).data("element"),e=$(a).val();if($(a).hasClass("tmce-active"));else{var i=$(a)[0].selectionStart;i>0&&(t=" "+t),$(a).val(e.substring(0,i)+t+e.substring(i))}})})};n()});

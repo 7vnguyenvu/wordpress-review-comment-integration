@@ -1,0 +1,44 @@
+body.wpzinc.review-comment-integration-pro-plugin div.wrap h1.wp-heading-inline,
+body.wpzinc.review-comment-integration-plugin div.wrap h1.wp-heading-inline {
+    background-image: url(../images/icons/logo.png);
+    background-position: 25px 50%;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+}
+form.review-comment-integration-pro-plugin div#titlediv {
+    margin-bottom: 20px;
+}
+form.review-comment-integration-pro-plugin #sortable div.option p a.dashicons-sort {
+    margin-top: 5px;
+}
+form.review-comment-integration-pro-plugin a.wp-color-result {
+    margin: 0;
+}
+form.review-comment-integration-pro-plugin .extra-options {
+    display: none;
+}
+#review-comment-integration-pro-plugin-ratings div.inside {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#review-comment-integration-pro-plugin-ratings p.crfp-field {
+    float: none;
+}
+#review-comment-integration-pro-plugin-ratings p.crfp-field label {
+    font-weight: bold;
+}
+#review-comment-integration-pro-plugin-ratings p.crfp-field span.star-rating-control {
+    float: right;
+    display: inline-block;
+    margin-top: 5px;
+}
+i.mce-i-icon {
+    font: normal 20px/1 "dashicons";
+    padding: 0;
+    vertical-align: top;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-left: -2px;
+    padding-right: 2px;
+}
