@@ -1,4 +1,4 @@
-# WORDPRESS - REVIEW COMMENT INTEGRATION PLUGIN
+# WP PLUGIN - REVIEW COMMENT INTEGRATION
 📌 Tích hợp phần đánh giá vào bình luận của bạn ⚡
 
 ### Tải xuống và sử dụng:
