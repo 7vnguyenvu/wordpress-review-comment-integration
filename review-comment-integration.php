@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Review Comment Integration
- * Plugin URI: Undefined
+ * Plugin URI: https://sevsee.vercel.app
  * Version: 4.5.2
  * Author: 7V - Nguyen Vu
  * Author URI: https://github.com/7vnguyenvu
