@@ -6,4 +6,6 @@
 - Bước 2: Truy cập vào CMS -> Plugin -> Cài Plugin
 - Bước 3: Tải Plugin lên -> Kích hoạt Plugin -> Sử dụng Plugin 😉.
 
-> Lưu ý: Trong quá trình sử dụng nếu có thắc mắc vui lòng liên hệ CODER để được hỗ trợ nhanh nhất nhé.
+> Lưu ý:
+> 1. Cần tắt phần "Tác giả bình luận phải điền tên và email" trong cài đặt của "Bình luận"
+> 2. Trong quá trình sử dụng nếu có thắc mắc vui lòng liên hệ CODER để được hỗ trợ nhanh nhất nhé.
