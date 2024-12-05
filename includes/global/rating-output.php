@@ -351,6 +351,10 @@ class Comment_Rating_Field_Pro_Rating_Output
 				background-color: <?php echo $group['css']['starColor']; ?>;
 			}
 
+			div.rating-container.crfp-group-<?php echo $group['groupID'] . ' '; ?>span.label {
+				margin-right: .5rem;
+			}
+
 			/* COMMENT ANALYTICS */
 			/* Review box */
 			.review-box-average {

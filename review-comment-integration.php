@@ -159,8 +159,7 @@ add_action('activate_wpmu_site', array('Comment_Rating_Field_Pro_Install', 'acti
 ///////////////////////////////// COMMENT - ANALYTICS /////////////////////////////////////
 // Loại bỏ tiêu đề cũ của comments-title trong Flatsome
 function remove_comments_title_script()
-{
-?>
+{ ?>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function removeCommentsTitle() {
@@ -169,8 +168,7 @@ function remove_comments_title_script()
             removeCommentsTitle();
         });
     </script>
-    <?php
-}
+<?php}
 add_action('wp_footer', 'remove_comments_title_script');
 
 // Thêm tiêu đề mới
@@ -181,19 +179,13 @@ function add_custom_comments_title_and_review()
     ?>
         <!-- Tiêu đề mới -->
         <h2 class="comments-title">
-            <?php
-            printf(
-                esc_html(_nx('Đánh giá %2$s', 'Đánh giá %2$s', get_comments_number(), 'comments title', 'flatsome')),
-                number_format_i18n(get_comments_number()),
-                '<span>' . get_the_title() . '</span>'
-            );
-            ?>
+            <?php printf(esc_html__('Đánh giá cho %s', 'flatsome'), '<span>' . get_the_title() . '</span>'); ?>
         </h2>
 
         <!-- Review Box -->
         <div class="review-box-average">
             <div class="average-star">
-                <span>5</span>
+                <span class="average-star-number">5</span>
                 <i class="icon-star"></i>
             </div>
             <div class="average-view-list">
@@ -203,9 +195,9 @@ function add_custom_comments_title_and_review()
                             <span><?php echo $i; ?></span>
                             <i class="icon-star"></i>
                         </div>
-                        <div class="progress" style="--value: <?php echo $i === 5 ? '100%' : '0%'; ?>"></div>
+                        <div class="progress progress-percent-star-<?php echo $i; ?>" style="--value: 0%"></div>
                         <div>
-                            <span><?php echo $i === 5 ? get_comments_number() : '0'; ?></span>
+                            <span class="amount-rating-<?php echo $i; ?>">0</span>
                             <span>Đánh giá</span>
                         </div>
                     </div>
@@ -218,9 +210,52 @@ function add_custom_comments_title_and_review()
                 </a>
             </div>
         </div>
+
     <?php
     }
 }
+function fill_value_progress_star_percent()
+{ ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lấy tất cả các sao từ danh sách comment
+            const starGroups = document.querySelectorAll('.comment-list .crfp-rating');
+            const ratings = Array.from(starGroups).map(el => {
+                const match = el.className.match(/crfp-rating-(\d+)/);
+                return match ? parseInt(match[1], 10) : null; // Trả về số hoặc null nếu không tìm thấy
+            });
+            // Đếm số lượng mỗi giá trị từ 1 đến 5
+            const ratingCounts = [5, 4, 3, 2, 1].map(rating => ratings.filter(r => r === rating).length);
+            const totalRatings = ratings.length; // Tổng số đánh giá            
+            const percentages = ratingCounts.map(count => (totalRatings > 0 ? (count / totalRatings) * 100 : 0)); // Tính tỷ lệ phần trăm
+
+            // Tính giá trị trung bình của sao & Cập nhật giá trị trung bình của sao
+            const averageRating = totalRatings > 0 ? (ratings.reduce((sum, rating) => sum + rating, 0) / totalRatings).toFixed(1) : 0;
+            const averageStarNumberElement = document.querySelector('.average-star-number');
+            if (averageStarNumberElement) {
+                averageStarNumberElement.textContent = averageRating; // Cập nhật điểm trung bình
+            }
+
+            // Cập nhật giá trị cho từng progress bar
+            percentages.forEach((percent, index) => {
+                const starValue = 5 - index; // Giá trị sao (từ 5 đến 1)
+                const progressBar = document.querySelector(`.progress-percent-star-${starValue}`);
+                const amountRating = document.querySelector(`.amount-rating-${starValue}`);
+
+                // Cập nhật giá trị tiến trình
+                if (progressBar) {
+                    progressBar.style.setProperty('--value', `${percent}%`);
+                }
+
+                // Cập nhật số lượng đánh giá
+                if (amountRating) {
+                    amountRating.textContent = ratingCounts[index]; // Cập nhật số lượng đánh giá tương ứng
+                }
+            });
+        });
+    </script>
+<?php }
+add_action('wp_footer', 'fill_value_progress_star_percent');
 
 ///////////////////////////////// COMMENT - SUBMIT ////////////////////////////////////////
 function custom_comment_redirect($location)
@@ -332,8 +367,7 @@ add_filter('comment_form_defaults', 'custom_comment_form_defaults');
 
 // Thêm custom scripts để kiểm tra các trường bắt buộc trước khi tắt validation
 function add_custom_comment_scripts()
-{
-    ?>
+{ ?>
     <script>
         jQuery(document).ready(function($) {
             $('#commentform').removeAttr('novalidate');
@@ -350,8 +384,7 @@ function add_custom_comment_scripts()
             });
         });
     </script>
-<?php
-}
+<?php }
 add_action('wp_footer', 'add_custom_comment_scripts');
 
 // Lưu số điện thoại khi comment được gửi
