@@ -168,7 +168,7 @@ function remove_comments_title_script()
             removeCommentsTitle();
         });
     </script>
-<?php}
+    <?php }
 add_action('wp_footer', 'remove_comments_title_script');
 
 // Thêm tiêu đề mới
