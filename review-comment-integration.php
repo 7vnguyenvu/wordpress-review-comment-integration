@@ -180,7 +180,7 @@ function add_custom_comments_title_and_review()
     if (have_comments()) {
     ?>
         <!-- Tiêu đề mới -->
-        <h2 class="comments-title uppercase">
+        <h2 class="comments-title">
             <?php
             printf(
                 esc_html(_nx('Đánh giá %2$s', 'Đánh giá %2$s', get_comments_number(), 'comments title', 'flatsome')),
@@ -212,7 +212,7 @@ function add_custom_comments_title_and_review()
                 <?php endfor; ?>
             </div>
             <div class="average-button">
-                <p>Bạn đã dùng sản phẩm này?</p>
+                <p>Hãy cho tôi biết ý kiến của bạn?</p>
                 <a href="#respond" rel="nofollow">
                     <button>Viết đánh giá</button>
                 </a>
