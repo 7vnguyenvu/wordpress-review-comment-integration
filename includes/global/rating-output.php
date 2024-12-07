@@ -959,7 +959,7 @@ class Comment_Rating_Field_Pro_Rating_Output
 			// Output schema if not an excerpt
 			if ($type != 'excerpt' && !$disable_schema_markup) {
 				$html .= ' itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-							<meta itemprop="ratingValue" content="' . $averageRating . '" />
+							<meta itemprop="ratingValue" content="' . number_format($averageRating, 1) . '" />
 							<meta itemprop="reviewCount" content="' . $totalRatings . '" />
 							<span itemprop="itemReviewed" itemscope itemtype="http://schema.org/CreativeWorkSeries">
 								<meta itemprop="name" content="' . $item_name . '" />
@@ -1029,7 +1029,7 @@ class Comment_Rating_Field_Pro_Rating_Output
 					 * Stars
 					 */
 				case 1:
-					$html .= '<span>' . $averageRating . '/5 </span>';
+					$html .= '<span class="rating-top-update-rating">' .  number_format($averageRating, 1) . '/5 </span>';
 					$html .= '
 			       		<span class="' . ((($group[$setting_group]['enabled'] == 2 && $totalRatings == 0) || $group[$setting_group]['style'] == 'grey') ? 'rating-always-on' : 'rating-filled-only') . '">
 							<span class="crfp-rating crfp-rating-' . str_replace('.', '-', $averageRating) . '" style="width:' . ($averageRating * $group['css']['starSize']) . 'px">';

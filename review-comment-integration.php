@@ -232,8 +232,12 @@ function fill_value_progress_star_percent()
             // Tính giá trị trung bình của sao & Cập nhật giá trị trung bình của sao
             const averageRating = totalRatings > 0 ? (ratings.reduce((sum, rating) => sum + rating, 0) / totalRatings).toFixed(1) : 0;
             const averageStarNumberElement = document.querySelector('.average-star-number');
+            const ratingTopContent = document.querySelector('.rating-top-update-rating');
+            const metaRatingValue = document.querySelector('meta[itemprop="ratingValue"]');
             if (averageStarNumberElement) {
-                averageStarNumberElement.textContent = averageRating; // Cập nhật điểm trung bình
+                averageStarNumberElement.textContent = averageRating; // Cập nhật điểm trung bình				
+                ratingTopContent.innerText = averageRating + '/5'; // Cập nhật điểm trung bình phía trên đầu content
+                metaRatingValue.content = averageRating;
             }
 
             // Cập nhật giá trị cho từng progress bar
