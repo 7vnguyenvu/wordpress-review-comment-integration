@@ -299,6 +299,7 @@ class Comment_Rating_Field_Pro_Rating_Output
 				width: <?php echo ($group['css']['starSize'] * $group['ratingInput']['maxRating']); ?>px;
 				height: <?php echo $group['css']['starSize']; ?>px;
 				background-image: url(<?php echo $this->base->plugin->url; ?>/views/global/svg.php?svg=star&color=<?php echo str_replace('#', '', $group['css']['starColor']); ?>&size=<?php echo $group['css']['starSize']; ?>);
+				line-height: 1.2;
 			}
 
 			div.rating-container.crfp-group-<?php echo $group['groupID'] . ' '; ?>div.star-rating a {
